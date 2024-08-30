@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /index.html
+Disallow: /img/
+Disallow: /images/
+Disallow: /helpdesk/
+
+Sitemap: https://itsystems.com.pl/sitemap.xml
