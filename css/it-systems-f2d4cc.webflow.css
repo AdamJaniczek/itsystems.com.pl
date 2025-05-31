@@ -2000,6 +2000,13 @@
   border-radius: 20px;
 }
 
+.slide-7 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #000 73%), url('../images/project_nest.png');
+  background-position: 0 0, 50%;
+  background-size: auto, 100% 100%;
+  border-radius: 20px;
+}
+
 .kula {
   z-index: -1;
   opacity: .5;

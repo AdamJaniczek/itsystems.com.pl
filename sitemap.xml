@@ -9,14 +9,52 @@
 
 <url>
   <loc>https://itsystems.com.pl/</loc>
-  <lastmod>2022-10-17T19:01:31+00:00</lastmod>
+  <lastmod>2022-10-17</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://itsystems.com.pl/index.html</loc>
-  <lastmod>2022-10-17T19:01:31+00:00</lastmod>
+  <lastmod>2022-10-17</lastmod>
   <priority>0.80</priority>
 </url>
-
-
+<url>
+  <loc>https://itsystems.com.pl/dell-partner/</loc>
+  <lastmod>2025-05-08</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/hpe-partner/</loc>
+  <lastmod>2025-05-08</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/dodaj-opinie/</loc>
+  <lastmod>2025-05-08</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/kontakt/</loc>
+  <lastmod>2025-05-23</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/produkt/produkt-certum-weryfikacja-tozsamosci.html</loc>
+  <lastmod>2025-05-23</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/produkt/produkt-certum-podpis-kwalifikowany.html</loc>
+  <lastmod>2025-05-26</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/produkt/serwis-komputerowy.html</loc>
+  <lastmod>2025-05-31</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itsystems.com.pl/umow-spotkanie/</loc>
+  <lastmod>2025-05-31</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>

@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /index.html
+Allow: /umow-spotkanie/
+Allow: /kontakt/
+Allow: /dell-partner/
+Allow: /hpe-partner/
+Allow: /produkt/*.html
+Allow: /produkt/produkt-certum-weryfikacja-tozsamosci.html
+Allow: /produkt/produkt-certum-podpis-kwalifikowany.html
+Allow: /produkt/serwis-komputerowy.html
 Disallow: /img/
 Disallow: /images/
 Disallow: /helpdesk/

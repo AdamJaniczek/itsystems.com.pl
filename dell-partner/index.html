@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell Technologies Authorized Partner</title>
+    <meta content="Autoryzowany przedstawiciel Dell Technologies Authorized Partner we Wrocławiu" name="description">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #pdf-container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+
+    <!-- Ładowanie PDF.js z CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>
+        const url = 'https://dynamic.ziftsolutions.com/dell.ziftsolutions.com/file/8a998ddb96aa90610196b0dabd7556c2.pdf'; // Zmień na ścieżkę do swojego PDF
+
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+        const canvas = document.getElementById('pdf-canvas');
+        const context = canvas.getContext('2d');
+
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            pdf.getPage(1).then(page => {
+                const container = document.getElementById('pdf-container');
+                const desiredWidth = container.clientWidth;
+                const viewport = page.getViewport({ scale: 1 });
+                const scale = desiredWidth / viewport.width;
+                const scaledViewport = page.getViewport({ scale: scale });
+
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: scaledViewport
+                };
+                page.render(renderContext);
+            });
+        }).catch(error => {
+            console.error('Błąd ładowania PDF:', error);
+        });
+    </script>
+
+</body>
+</html>

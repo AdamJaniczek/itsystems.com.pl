@@ -353,3 +353,11 @@ td,
 th {
   padding: 0;
 }
+
+.product-name {
+  text-align: center;
+}
+
+strong.price {
+  font-weight: bold;
+}

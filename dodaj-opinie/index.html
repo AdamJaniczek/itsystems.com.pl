@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj opinię</title>
+    <meta name="description" content="Dodaj opinię o firmie">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT3W71T25J"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MT3W71T25J');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MT3W71T25J');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A7J Studio</title>
-    <meta name="description" content="Dodaj opinie o firmie">
-    <script type="text/javascript">
-        function contactForm() {
-            const webForm = "https://g.page/r/CTxLHPfJVrGkECA/review";
-            window.location.assign(webForm);
+
+    <script>
+        // Automatyczne przekierowanie do formularza opinii
+        function redirectToReviewForm() {
+            const reviewUrl = "https://g.page/r/CTxLHPfJVrGkECA/review";
+            window.location.href = reviewUrl;
         }
-        </script>
+        window.onload = redirectToReviewForm;
+    </script>
 </head>
 <body>
-    <script>
-        contactForm();
-    </script>
+    <noscript>
+        <p>Aby dodać opinię, kliknij <a href="https://g.page/r/CTxLHPfJVrGkECA/review" target="_blank" rel="noopener">tutaj</a>.</p>
+    </noscript>
 </body>
 </html>
