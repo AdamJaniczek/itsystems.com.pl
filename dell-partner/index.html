@@ -1,30 +1,64 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 <head>
+    <!-- =================================================================
+    METADANE PODSTAWOWE I SEO
+    ================================================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dell Technologies Authorized Partner</title>
-    <meta content="Autoryzowany przedstawiciel Dell Technologies Authorized Partner we Wrocławiu" name="description">
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
-            background: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        h2 {
-            text-align: center;
-        }
+    <!-- Tytuł SEO (Title Tag) - kluczowy dla wyszukiwarek -->
+    <title>Autoryzowany Partner Dell - Rozwiązania Dell EMC | IT SYSTEMS</title>
 
-        #pdf-container {
-            width: 100%;
-            max-width: 900px;
-        }
+    <!-- Opis Meta (Meta Description) - zachęca do kliknięcia w wynikach wyszukiwania -->
+    <meta name="description" content="IT SYSTEMS - jako autoryzowany partner Dell Technologies, oferujemy kompleksowe rozwiązania Dell EMC. Dostarczamy serwery, macierze, laptopy i stacje robocze. Sprawdź naszą ofertę!">
 
+    <!-- Słowa kluczowe (opcjonalnie) -->
+    <meta name="keywords" content="partner dell, dell partner, autoryzowany partner dell, dell emc, serwery dell, macierze dell, dell poweredge, dell latitude, dell precision, IT SYSTEMS">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itsystems.com.pl/dell-partner/">
+    <meta property="og:title" content="Autoryzowany Partner Dell - Rozwiązania Dell EMC | IT SYSTEMS">
+    <meta property="og:description" content="Zaufaj partnerowi Dell. Oferujemy profesjonalne doradztwo, wdrożenia i wsparcie dla technologii Dell.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0076CE/FFFFFF?text=Partner+Dell">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://itsystems.com.pl/dell-partner/">
+    <meta property="twitter:title" content="Autoryzowany Partner Dell - Rozwiązania Dell EMC | IT SYSTEMS">
+    <meta property="twitter:description" content="Zaufaj partnerowi Dell. Oferujemy profesjonalne doradztwo, wdrożenia i wsparcie dla technologii Dell.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0076CE/FFFFFF?text=Partner+Dell">
+
+    <!-- =================================================================
+    STYLE I CZCIONKI
+    ================================================================= -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Konfiguracja Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                    },
+                    colors: {
+                        'dell-blue': '#0076CE',
+                        'dell-gray': '#4A4A4A',
+                        'light-bg': '#f8f9fa'
+                    }
+                }
+            }
+        }
+    </script>
+        <style>
         canvas {
             width: 100% !important;
             height: auto !important;
@@ -33,12 +67,162 @@
         }
     </style>
 </head>
-<body>
-    <div id="pdf-container">
-        <canvas id="pdf-canvas"></canvas>
-    </div>
+<body class="bg-white text-dell-gray font-sans">
 
-    <!-- Ładowanie PDF.js z CDN -->
+    <!-- === HEADER === -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-dell-gray">IT SYSTEMS</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#benefits" class="text-gray-600 hover:text-dell-blue transition duration-300">Korzyści</a>
+                <a href="#offer" class="text-gray-600 hover:text-dell-blue transition duration-300">Oferta</a>
+                <a href="#contact" class="bg-dell-blue text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition duration-300">Kontakt</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#benefits" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Korzyści</a>
+            <a href="#offer" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Oferta</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <!-- === MAIN CONTENT === -->
+    <main>
+
+        <!-- === HERO SECTION === -->
+        <section class="bg-light-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <span class="text-dell-blue font-bold uppercase tracking-wider">PARTNER DELL TECHNOLOGIES</span>
+                <!-- GŁÓWNY NAGŁÓWEK H1 -->
+                <h1 class="text-4xl md:text-6xl font-black text-dell-gray my-4 leading-tight">Kompleksowe rozwiązania Dell dla Twojego biznesu</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Jako autoryzowany partner Dell, zapewniamy dostęp do najnowszych technologii, profesjonalne doradztwo i wsparcie na każdym etapie współpracy.</p>
+                <a href="#contact" class="bg-dell-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Zapytaj o Ofertę</a>
+            </div>
+        </section>
+
+        <!-- === BENEFITS SECTION === -->
+        <section id="benefits" class="py-20">
+            <div class="container mx-auto px-6">
+                <!-- NAGŁÓWEK SEKCJI H2 -->
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Dlaczego IT SYSTEMS?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Benefit Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-dell-blue inline-block p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Certyfikowana Wiedza</h3>
+                        <p class="text-gray-600">Nasz zespół to certyfikowani inżynierowie z wieloletnim doświadczeniem we wdrażaniu i utrzymaniu technologii Dell.</p>
+                    </div>
+                    <!-- Benefit Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-dell-blue inline-block p-4 rounded-full mb-4">
+                           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Kompleksowa Oferta</h3>
+                        <p class="text-gray-600">Od stacji roboczych Precision, przez laptopy Latitude, aż po zaawansowane serwery PowerEdge i macierze.</p>
+                    </div>
+                    <!-- Benefit Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-dell-blue inline-block p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Indywidualne Wsparcie</h3>
+                        <p class="text-gray-600">Zapewniamy dedykowane wsparcie techniczne i doradztwo dopasowane do unikalnych potrzeb Twojego biznesu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === PDF CANVAS SECTION === -->
+        <section id="pdf-viewer-section" class="py-20 bg-light-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Nasz Certyfikat Partnerstwa</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Jesteśmy dumni z posiadania statusu partnera Dell, co potwierdza nasze kompetencje i zaangażowanie.</p>
+                <div id="pdf-container" class="flex justify-center">
+                    <!-- Canvas będzie renderował PDF; dodano obramowanie dla widoczności -->
+                    <canvas id="pdf-canvas" class="border-2 border-gray-300 shadow-lg rounded-md"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- === OFFER SECTION === -->
+        <section id="offer" class="bg-light-bg py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nasza oferta rozwiązań Dell</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Offer Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Laptopy+i+Stacje" alt="Laptopy biznesowe Dell Latitude" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Laptopy i Stacje Robocze</h3>
+                            <p class="text-gray-600">Pełna gama laptopów <strong>Dell Latitude</strong>, Vostro oraz ultrawydajnych stacji roboczych <strong>Dell Precision</strong> dla najbardziej wymagających.</p>
+                        </div>
+                    </div>
+                    <!-- Offer Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Serwery+i+Macierze" alt="Serwer Dell PowerEdge w serwerowni" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Infrastruktura IT</h3>
+                            <p class="text-gray-600">Skalowalne środowiska oparte o serwery <strong>Dell PowerEdge</strong> oraz macierze dyskowe <strong>Dell PowerStore</strong> i PowerVault.</p>
+                        </div>
+                    </div>
+                    <!-- Offer Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Monitory+i+Akcesoria" alt="Monitor Dell UltraSharp na biurku" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Monitory i Akcesoria</h3>
+                            <p class="text-gray-600">Uzupełnij stanowisko pracy o profesjonalne monitory <strong>Dell UltraSharp</strong>, stacje dokujące i inne peryferia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === CONTACT CTA SECTION === -->
+        <section id="contact" class="bg-dell-blue text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Gotowy na rozwój z technologią Dell?</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Nasi eksperci pomogą dobrać idealne rozwiązania dla Twojej firmy. Czekamy na Twój telefon lub e-mail.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                     <a href="mailtokontakt@itsystems.com.pl" class="text-xl font-bold">kontakt@itsystems.com.pl</a>
+                     <a href="tel:+48123456789" class="text-xl font-bold">+48 452 333 831</a>
+                </div>
+                <div>
+                    <span><br>IT SYSTEMS</span>
+                    <span><br>ul. Aleksandra Ostrowsiego 7/119</span>
+                    <span><br>53-238 Wrocław</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- === FOOTER === -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 IT SYSTEMS. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypt do mobilnego menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+        <!-- Ładowanie PDF.js z CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script>
         const url = 'https://dynamic.ziftsolutions.com/dell.ziftsolutions.com/file/8a998ddb96aa90610196b0dabd7556c2.pdf'; // Zmień na ścieżkę do swojego PDF
@@ -70,6 +254,5 @@
             console.error('Błąd ładowania PDF:', error);
         });
     </script>
-
 </body>
 </html>
