@@ -8,6 +8,7 @@ Allow: /produkt/*.html
 Allow: /produkt/produkt-certum-weryfikacja-tozsamosci.html
 Allow: /produkt/produkt-certum-podpis-kwalifikowany.html
 Allow: /produkt/serwis-komputerowy.html
+Allow: /produkt/produkt-Microsoft365-Business-Basic.html
 Disallow: /img/
 Disallow: /images/
 Disallow: /helpdesk/
