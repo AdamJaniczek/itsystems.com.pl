@@ -1,43 +1,218 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 <head>
+    <!-- =================================================================
+    METADANE PODSTAWOWE I SEO DLA HPE
+    ================================================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hewlett Packard Enterprise</title>
-    <meta content="Autoryzowany przedstawiciel HPE we Wrocławiu" name="description">
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
-            background: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        h2 {
-            text-align: center;
-        }
+    <!-- Tytuł SEO (Title Tag) -->
+    <title>Autoryzowany Partner HPE - Rozwiązania i Serwery | IT SYSTEMS</title>
 
-        #pdf-container {
-            width: 100%;
-            max-width: 900px;
-        }
+    <!-- Opis Meta (Meta Description) -->
+    <meta name="description" content="IT SYSTEMS - jako autoryzowany Partner HPE, oferujemy kompleksowe rozwiązania serwerowe, sieciowe i storage. Poznaj serwery HPE ProLiant i rozwiązania Aruba.">
 
-        canvas {
-            width: 100% !important;
-            height: auto !important;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: white;
+    <!-- Słowa kluczowe (opcjonalnie) -->
+    <meta name="keywords" content="partner hpe, hpe partner, autoryzowany partner hpe, serwery hpe proliant, hpe aruba, hpe alletra, hpe nimble, IT SYSTEMS">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itsystems.com.pl/hpe-partner/">
+    <meta property="og:title" content="Autoryzowany Partner HPE - Rozwiązania i Serwery | IT SYSTEMS">
+    <meta property="og:description" content="Zaufaj Partnerowi HPE. Oferujemy profesjonalne doradztwo, wdrożenia i wsparcie dla technologii Hewlett Packard Enterprise.">
+    <meta property="og:image" content="https://placehold.co/1200x630/01A982/FFFFFF?text=Partner+HPE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://itsystems.com.pl/hpe-partner/">
+    <meta property="twitter:title" content="Autoryzowany Partner HPE - Rozwiązania i Serwery | IT SYSTEMS">
+    <meta property="twitter:description" content="Zaufaj Partnerowi HPE. Oferujemy profesjonalne doradztwo, wdrożenia i wsparcie dla technologii Hewlett Packard Enterprise.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/01A982/FFFFFF?text=Partner+HPE">
+
+    <!-- =================================================================
+    STYLE I CZCIONKI
+    ================================================================= -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Konfiguracja Tailwind dla HPE -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                    },
+                    colors: {
+                        'hpe-green': '#01A982', // Oficjalny zielony HPE
+                        'hpe-gray': '#4A4A4A',
+                        'light-bg': '#f8f9fa'
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body>
-    <div id="pdf-container">
-        <canvas id="pdf-canvas"></canvas>
-    </div>
+<body class="bg-white text-hpe-gray font-sans">
 
+    <!-- === HEADER === -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-hpe-gray">IT SYSTEMS</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#benefits" class="text-gray-600 hover:text-hpe-green transition duration-300">Korzyści</a>
+                <a href="#offer" class="text-gray-600 hover:text-hpe-green transition duration-300">Oferta</a>
+                <a href="#contact" class="bg-hpe-green text-white px-5 py-2 rounded-full font-bold hover:bg-green-700 transition duration-300">Kontakt</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#benefits" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Korzyści</a>
+            <a href="#offer" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Oferta</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-600 hover:bg-gray-100">Kontakt</a>
+        </div>
+    </header>
+
+    <!-- === MAIN CONTENT === -->
+    <main>
+
+        <!-- === HERO SECTION === -->
+        <section class="bg-light-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <span class="text-hpe-green font-bold uppercase tracking-wider">PARTNER HEWLETT PACKARD ENTERPRISE</span>
+                <!-- GŁÓWNY NAGŁÓWEK H1 -->
+                <h1 class="text-4xl md:text-6xl font-black text-hpe-gray my-4 leading-tight">Innowacyjna Infrastruktura IT z HPE</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Jako certyfikowany partner HPE, dostarczamy i wdrażamy wiodące technologie serwerowe, sieciowe i storage, które napędzają transformację cyfrową.</p>
+                <a href="#contact" class="bg-hpe-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">Skonsultuj Swój Projekt</a>
+            </div>
+        </section>
+
+        <!-- === BENEFITS SECTION === -->
+        <section id="benefits" class="py-20">
+            <div class="container mx-auto px-6">
+                <!-- NAGŁÓWEK SEKCJI H2 -->
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Dlaczego IT SYSTEMS?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Benefit Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-hpe-green inline-block p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Kompetencje i Doświadczenie</h3>
+                        <p class="text-gray-600">Nasi certyfikowani specjaliści posiadają głęboką wiedzę na temat portfolio produktów HPE, co gwarantuje najwyższą jakość usług.</p>
+                    </div>
+                    <!-- Benefit Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-hpe-green inline-block p-4 rounded-full mb-4">
+                           <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pełne Portfolio Rozwiązań</h3>
+                        <p class="text-gray-600">Oferujemy całą gamę produktów HPE, od serwerów ProLiant, przez pamięci masowe Alletra, po zaawansowane rozwiązania sieciowe Aruba.</p>
+                    </div>
+                    <!-- Benefit Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                        <div class="bg-hpe-green inline-block p-4 rounded-full mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Wsparcie i Doradztwo</h3>
+                        <p class="text-gray-600">Zapewniamy wsparcie na każdym etapie projektu – od analizy potrzeb, przez projekt architektury, aż po wdrożenie i utrzymanie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === OFFER SECTION === -->
+        <section id="offer" class="bg-light-bg py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nasza oferta rozwiązań HPE</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Offer Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Serwery+HPE+ProLiant" alt="Serwery HPE ProLiant" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Serwery i Hiperkonwergencja</h3>
+                            <p class="text-gray-600">Wdrażamy niezawodne serwery <strong>HPE ProLiant</strong> oraz systemy hiperkonwergentne <strong>HPE SimpliVity</strong>, zapewniając moc i elastyczność dla Twojego centrum danych.</p>
+                        </div>
+                    </div>
+                    <!-- Offer Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Rozwiązania+Sieciowe+Aruba" alt="Przełącznik sieciowy HPE Aruba" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Inteligentne Rozwiązania Sieciowe</h3>
+                            <p class="text-gray-600">Projektujemy i wdrażamy bezpieczne, wydajne i zautomatyzowane sieci przewodowe i bezprzewodowe oparte na technologii <strong>HPE Aruba</strong>.</p>
+                        </div>
+                    </div>
+                    <!-- Offer Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/EFEFEF/4A4A4A?text=Pamięć+Masowa+HPE" alt="Macierz dyskowa HPE Alletra" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Pamięć Masowa i Backup</h3>
+                            <p class="text-gray-600">Dostarczamy inteligentne systemy pamięci masowej <strong>HPE Alletra</strong> i <strong>Nimble Storage</strong>, które gwarantują szybkość, dostępność i ochronę danych.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === PDF CANVAS SECTION === -->
+        <section id="pdf-viewer-section" class="py-20 bg-light-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Nasz Certyfikat Partnerstwa</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Jesteśmy dumni z posiadania statusu partnera Dell, co potwierdza nasze kompetencje i zaangażowanie.</p>
+                <div id="pdf-container" class="flex justify-center">
+                    <!-- Canvas będzie renderował PDF; dodano obramowanie dla widoczności -->
+                    <canvas id="pdf-canvas" class="border-2 border-gray-300 shadow-lg rounded-md"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- === CONTACT CTA SECTION === -->
+        <section id="contact" class="bg-hpe-green text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Porozmawiajmy o Twojej infrastrukturze IT</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">Nasi eksperci pomogą dobrać idealne rozwiązania HPE dla Twojej firmy. Czekamy na Twój telefon lub e-mail.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                     <a href="mailtokontakt@itsystems.com.pl" class="text-xl font-bold">kontakt@itsystems.com.pl</a>
+                     <a href="tel:+48123456789" class="text-xl font-bold">+48 452 333 831</a>
+                </div>
+                <div>
+                    <span><br>IT SYSTEMS</span>
+                    <span><br>ul. Aleksandra Ostrowsiego 7/119</span>
+                    <span><br>53-238 Wrocław</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- === FOOTER === -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 IT SYSTEMS. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypt do mobilnego menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
     <!-- Ładowanie PDF.js z CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script>
@@ -70,6 +245,5 @@
             console.error('Błąd ładowania PDF:', error);
         });
     </script>
-
 </body>
 </html>
